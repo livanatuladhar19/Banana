@@ -1,0 +1,133 @@
+/* ===== Body & Background ===== */
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: bgMove 15s ease infinite;
+}
+
+/* Tie-dye movement */
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Floating Orbs ===== */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.7;
+  animation: float 12s ease-in-out infinite;
+}
+
+.orb1 { width:220px; height:220px; top:-80px; left:50px; background: radial-gradient(#ff6ec7, #b83280); }
+.orb2 { width:260px; height:260px; top:200px; right:-100px; background: radial-gradient(#ffd86f, #f4a261); }
+.orb3 { width:200px; height:200px; bottom:-80px; left:150px; background: radial-gradient(#8ec5fc, #5f7cff); }
+.orb4 { width:240px; height:240px; bottom:100px; right:200px; background: radial-gradient(#c77dff, #7b2cbf); }
+.orb5 { width:180px; height:180px; top:300px; left:-100px; background: radial-gradient(#ffb703, #fb8500); }
+.orb6 { width:210px; height:210px; bottom:-120px; right:-120px; background: radial-gradient(#ffafcc, #c9184a); }
+
+@keyframes float {
+  0%,100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-60px) scale(1.15); }
+}
+
+/* ===== Center Box ===== */
+.center-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 360px;
+  padding: 35px 30px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  text-align: center;
+  z-index: 10;
+}
+
+/* ===== Text ===== */
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ===== Inputs ===== */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+/* ===== Buttons ===== */
+.main-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #f4d35e;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background: #f4a261;
+}
+
+/* ===== Choice Buttons ===== */
+.choice-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.choice-btn {
+  padding: 10px 25px;
+  background: #f4d35e;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.choice-btn:hover {
+  background: #f4a261;
+}
+
+/* ===== Links ===== */
+.guest-link, .back-link {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #e76f51;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ===== Hidden ===== */
+.hidden {
+  display: none;
+}
+.guest-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #e76f51;
+  text-decoration: underline;
+  cursor: pointer;
+  position: relative;
+  z-index: 50;
+}
+
+.guest-link:hover {
+  color: #c44536;
+}
